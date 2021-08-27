@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="modifyPartScreen" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="josephduclosinvsystem.View_Controller.ModifyPartController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="500.0">
+         <bottom>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#savePartHandler" prefWidth="75.0" text="Save">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#cancelPartHandler" prefWidth="75.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <GridPane alignment="CENTER" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="pIdLabel" alignment="CENTER" contentDisplay="CENTER" text="ID">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="pNameLabel" text="Name" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="pInvLabel" text="Inv" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="pCostLabel" text="Price/Cost" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="pMaxLabel" text="Max" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="pIdText" disable="true" prefHeight="25.0" prefWidth="100.0" promptText="Auto Gen - Deisabled" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="pNameText" prefHeight="25.0" prefWidth="100.0" promptText="Part Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="pInvText" prefHeight="25.0" prefWidth="100.0" promptText="Inv" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="pCostText" prefHeight="25.0" prefWidth="100.0" promptText="Price/Cost" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="pMaxText" prefHeight="25.0" prefWidth="50.0" promptText="Max" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="inOrOutText" prefHeight="25.0" prefWidth="75.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <TextField fx:id="pMinText" minHeight="25.0" prefWidth="50.0" promptText="Min" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="25.0" left="5.0" right="25.0" top="25.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label fx:id="pMinLabel" text="Min" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="inOrOut" prefHeight="17.0" prefWidth="11.0" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </center>
+         <top>
+            <HBox prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="150.0" text="Modify Part">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <Group id="group" layoutY="50.0">
+                     <children>
+                        <RadioButton fx:id="inhouseB" mnemonicParsing="false" onAction="#inhouseRadio" prefHeight="50.0" prefWidth="150.0" text="In-House">
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                        </RadioButton>
+                        <RadioButton fx:id="outsourcedB" layoutX="150.0" mnemonicParsing="false" onAction="#outsourcedRadio" prefHeight="50.0" prefWidth="150.0" text="Outsourced">
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </Group>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
